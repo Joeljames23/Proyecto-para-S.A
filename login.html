@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al Portal de Cliente - Consultoría Paraguay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#1A237E', // Azul índigo oscuro, muy profesional
+                        'brand-secondary': '#42A5F5', // Un azul medio, para acentos y llamadas a la acción
+                        'brand-dark-text': '#263238', // Gris oscuro casi negro para texto principal
+                        'brand-light-bg': '#ECEFF1', // Gris muy claro para fondos suaves
+                        'brand-muted-text': '#546E7A', // Gris azulado para texto secundario
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light-bg">
+
+    <div class="min-h-screen flex flex-col items-center justify-center">
+        <a href="index.html" class="text-4xl font-bold text-brand-primary mb-8">
+            Consultoría <span class="text-brand-secondary">PY</span>
+        </a>
+
+        <div class="bg-white p-10 md:p-12 rounded-2xl shadow-xl w-full max-w-md">
+            <h1 class="text-3xl font-bold text-brand-dark-text text-center mb-2">Acceso a Clientes</h1>
+            <p class="text-brand-muted-text text-center mb-8">Ingresa tus credenciales para acceder a tu portal.</p>
+
+            <form action="dashboard.html" method="GET"> 
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-brand-dark-text mb-1">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" 
+                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-primary"
+                           placeholder="tu@correo.com">
+                </div>
+
+                <div class="mb-6">
+                    <div class="flex justify-between items-center mb-1">
+                        <label for="password" class="block text-sm font-medium text-brand-dark-text">Contraseña</label>
+                        <a href="#" class="text-sm text-brand-primary hover:underline">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <input type="password" id="password" name="password" 
+                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-primary"
+                           placeholder="••••••••">
+                </div>
+
+                <div>
+                    <button type="submit" 
+                            class="w-full bg-brand-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary">
+                        Iniciar Sesión
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        <p class="mt-8 text-center text-brand-muted-text">
+            ¿Necesitas asistencia? <a href="#" class="font-medium text-brand-primary hover:underline">Contáctanos</a>
+        </p>
+    </div>
+
+</body>
+</html>

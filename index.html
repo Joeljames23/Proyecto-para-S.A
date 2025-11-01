@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoría Paraguay - Soluciones Estratégicas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/heroicons@2.1.1/24/outline/index.js"></script>
+    <script type="module" src="https://unpkg.com/heroicons@2.1.1/24/solid/index.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#1A237E', 
+                        'brand-secondary': '#42A5F5', 
+                        'brand-dark-text': '#263238', 
+                        'brand-light-bg': '#ECEFF1', 
+                        'brand-muted-text': '#546E7A', 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { transition: all 0.2s ease-in-out; }
+    </style>
+</head>
+<body class="bg-brand-light-bg font-sans text-brand-dark-text">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="{{ url_for('index') }}" class="text-3xl font-bold text-brand-primary">
+                Consultoría <span class="text-brand-secondary">PY</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="#servicios" class="text-brand-muted-text hover:text-brand-primary font-medium">Servicios</a>
+                <a href="#proyectos" class="text-brand-muted-text hover:text-brand-primary font-medium">Nuestros Casos</a>
+                <a href="#nosotros" class="text-brand-muted-text hover:text-brand-primary font-medium">Nosotros</a>
+                <a href="#contacto" class="text-brand-muted-text hover:text-brand-primary font-medium">Contacto</a>
+            </div>
+            
+            <a href="{{ url_for('login') }}" class="bg-brand-secondary text-white font-bold py-2 px-5 rounded-full hover:bg-blue-500 transform hover:scale-105">
+                Portal Cliente
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative bg-white">
+            <div class="container mx-auto px-6 py-20 md:py-32 grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <span class="text-brand-primary font-semibold uppercase">Estrategia & Innovación</span>
+                    <h1 class="text-4xl md:text-6xl font-bold text-brand-dark-text mt-2 mb-6 leading-tight">
+                        Impulsando el Éxito Empresarial en Paraguay
+                    </h1>
+                    <p class="text-lg text-brand-muted-text mb-8">
+                        Ofrecemos soluciones integrales en asesoría, gestión de proyectos y capacitación para empresas en Paraguay.
+                    </p>
+                    <a href="#servicios" class="bg-brand-primary text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-900 transform hover:scale-105">
+                        Ver Nuestros Servicios
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <img src="{{ url_for('static', filename='images/imagen1.jpg') }}" 
+                         alt="Equipo de consultores trabajando" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="py-24 bg-brand-light-bg">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-brand-dark-text mb-4">Nuestras Áreas de Expertise</h2>
+                    <p class="text-lg text-brand-muted-text max-w-2xl mx-auto">
+                        Soluciones a medida para los desafíos únicos de tu negocio.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2">
+                        <hero-icon-outline name="chart-bar" class="w-16 h-16 text-brand-secondary mb-4"></hero-icon-outline>
+                        <h3 class="text-2xl font-bold text-brand-dark-text mb-3">Asesoría Estratégica</h3>
+                        <p class="text-brand-muted-text mb-4">Análisis de mercado, planificación estratégica y optimización de procesos.</p>
+                        <a href="#" class="font-bold text-brand-primary hover:text-brand-secondary">Más detalles &rarr;</a>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2">
+                        <hero-icon-outline name="cube" class="w-16 h-16 text-brand-secondary mb-4"></hero-icon-outline>
+                        <h3 class="text-2xl font-bold text-brand-dark-text mb-3">Gestión de Proyectos</h3>
+                        <p class="text-brand-muted-text mb-4">Desde la concepción hasta la entrega, garantizamos el éxito de tus iniciativas.</p>
+                        <a href="#" class="font-bold text-brand-primary hover:text-brand-secondary">Más detalles &rarr;</a>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2">
+                        <hero-icon-outline name="light bulb" class="w-16 h-16 text-brand-secondary mb-4"></hero-icon-outline>
+                        <h3 class="text-2xl font-bold text-brand-dark-text mb-3">Capacitación y Desarrollo</h3>
+                        <p class="text-brand-muted-text mb-4">Programas de formación para potenciar las habilidades de tu equipo.</p>
+                        <a href="#" class="font-bold text-brand-primary hover:text-brand-secondary">Más detalles &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portal" class="py-24 bg-brand-primary text-white">
+            <div class="container mx-auto px-6 text-center">
+                 <hero-icon-solid name="user-group" class="w-20 h-20 text-brand-secondary mx-auto mb-6"></hero-icon-solid>
+                 <h2 class="text-4xl font-bold mb-4">Tu Espacio Exclusivo: Portal de Clientes</h2>
+                 <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
+                     Accede al progreso de tus proyectos, documentos clave y gestiona tus servicios de forma segura y eficiente.
+                 </p>
+                 <a href="{{ url_for('login') }}" class="bg-white text-brand-primary font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transform hover:scale-105">
+                     Ingresar al Portal
+                 </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-dark-text text-gray-400 py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-2xl font-bold text-white mb-4">Consultoría <span class="text-brand-secondary">PY</span></h4>
+                    <p class="mb-4">Estrategia e Innovación para el Futuro de Paraguay.</p>
+                    <p>&copy; 2025 Consultoría Paraguay. Todos los derechos reservados.</p>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Servicios</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Asesoría Estratégica</a></li>
+                        <li><a href="#" class="hover:text-white">Gestión de Proyectos</a></li>
+                        <li><a href="#" class="hover:text-white">Capacitación</a></li>
+                        <li><a href="#" class="hover:text-white">Consultoría TI</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Empresa</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Nosotros</a></li>
+                        <li><a href="#" class="hover:text-white">Nuestros Casos</a></li>
+                        <li><a href="#" class="hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Síguenos</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-white">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="hover:text-white">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
